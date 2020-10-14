@@ -41,3 +41,21 @@ run ./main
     * if Foo not implemented PartialEq
         * if Foo::Bar == a : error
         * if let Foo::Bar = a : ok
+* Fn / FnMut / FnOnce
+    * Fn : &T
+    * FnMut : &mut T
+    * FnOnce : T (move)
+* Diverging function
+    * never return
+    * marked as !
+    ```
+    fn foo() -> ! {
+        panic("xxx")
+    }
+    ```
+    * diff with return ()
+    ```
+    fn foo() {
+        ()
+    }
+    ```
